@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>오전 9시</td>
+                    <td id="mon-9"></td>
+                    <td id="tue-9"></td>
+                    <td id="wed-9"></td>
+                    <td id="thu-9"></td>
+                    <td id="fri-9"></td>
+                </tr>
+                <tr>
+                    <td>오전 10시</td>
+                    <td id="mon-10"></td>
+                    <td id="tue-10"></td>
+                    <td id="wed-10"></td>
+                    <td id="thu-10"></td>
+                    <td id="fri-10"></td>
+                </tr>
+                <tr>
+                    <td>오전 11시</td>
+                    <td id="mon-11"></td>
+                    <td id="tue-11"></td>
+                    <td id="wed-11"></td>
+                    <td id="thu-11"></td>
+                    <td id="fri-11"></td>
+                </tr>
+                <tr>
+                    <td>오전 12시</td>
+                    <td id="mon-12"></td>
+                    <td id="tue-12"></td>
+                    <td id="wed-12"></td>
+                    <td id="thu-12"></td>
+                    <td id="fri-12"></td>
+                </tr>
+                <tr>
+                    <td>오후 1시</td>
+                    <td id="mon-13"></td>
+                    <td id="tue-13"></td>
+                    <td id="wed-13"></td>
+                    <td id="thu-13"></td>
+                    <td id="fri-13"></td>
+                </tr>
+                <tr>
+                    <td>오후 2시</td>
+                    <td id="mon-14"></td>
+                    <td id="tue-14"></td>
+                    <td id="wed-14"></td>
+                    <td id="thu-14"></td>
+                    <td id="fri-14"></td>
+                </tr>
+                <tr>
+                    <td>오후 3시</td>
+                    <td id="mon-15"></td>
+                    <td id="tue-15"></td>
+                    <td id="wed-15"></td>
+                    <td id="thu-15"></td>
+                    <td id="fri-15"></td>
+                </tr>
+                <tr>
+                    <td>오후 4시</td>
+                    <td id="mon-16"></td>
+                    <td id="tue-16"></td>
+                    <td id="wed-16"></td>
+                    <td id="thu-16"></td>
+                    <td id="fri-16"></td>
+                </tr>
+                <tr>
+                    <td>오후 5시</td>
+                    <td id="mon-17"></td>
+                    <td id="tue-17"></td>
+                    <td id="wed-17"></td>
+                    <td id="thu-17"></td>
+                    <td id="fri-17"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-danger" data-toggle="modal" data-target="#myModal">등록</button>
+    </div>
+
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">새 수업 추가</h4>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table>
+                        <tr>
+                            <td>과목명(필수)</td>
+                            <td><input type="text" id="courseName" placeholder="예) 경제학입문"></td>
+                        </tr>
+                        <tr>
+                            <td>교수명</td>
+                            <td><input type="text" id="proffesorName" placeholder="예) 홍길동"></td>
+                        </tr>
+                        <tr>
+                            <td>시간/장소</td>
+                            <td>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="day" id="day"
+                                                    value="mon">월
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="day" id="day"
+                                                    value="tue">화
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="day" id="day"
+                                                    value="wed">수
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="day" id="day"
+                                                    value="thu">목
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="day" id="day"
+                                                    value="fri">금
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <select id="courseTime">
+                                            <option value="9">오전9시</option>
+                                            <option value="10">오전10시</option>
+                                            <option value="11">오전11시</option>
+                                            <option value="12">오전12시</option>
+                                            <option value="13">오후1시</option>
+                                            <option value="14">오후2시</option>
+                                            <option value="15">오후3시</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" id="saveBtn">저장</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const colors = ["red", "grey", "orange", "green", "yellow", "antiquewhite", "cornflowerblue"]
+
+        $("#saveBtn").click(() => {
+            let data = {
+                courseName: $("#courseName").val(),
+                proffesorName: $("#proffesorName").val(),
+                day: $(`input[name=day]:checked`).val(),
+                courseTime: $("#courseTime").val()
+            }
+            console.log(data);
+
+            // 1. 해당 값 JSON.stringify(data)으로 fetch 통신해서 insert 하기 (POST 통신)
+            // 2. 성공하면 화면 변경
+            setCourse(data);
+        });
+
+        function setCourse(data) {
+            let num = Math.floor(Math.random() * 7); // 0~6
+
+            // 1. 과목명
+            let temp = `${data.proffesorName} <br/> ${data.courseName}`
+            $(`#${data.day}-${Number(data.courseTime)}`).html(temp);
+
+            // 2. 색상
+            for (i = 0; i < 3; i++) {
+                $(`#${data.day}-${Number(data.courseTime) + i}`).css("background-color", colors[num]);
+            }
+        }
+    </script>
+</body>
+
+</html>
